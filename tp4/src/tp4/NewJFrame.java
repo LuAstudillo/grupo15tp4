@@ -5,6 +5,7 @@
 package tp4;
 
 import java.awt.Color;
+import java.util.HashSet;
 
 /**
  *
@@ -13,10 +14,8 @@ import java.awt.Color;
 public class NewJFrame extends javax.swing.JFrame {
     
     private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(NewJFrame.class.getName());
-
-    /**
-     * Creates new form NewJFrame
-     */
+    static HashSet<Alumno> alumnos = new HashSet<>();
+    static HashSet<Materia> materias = new HashSet<>();
     public NewJFrame() {
         initComponents();
       this.getContentPane().setBackground(new Color(51, 102, 153));

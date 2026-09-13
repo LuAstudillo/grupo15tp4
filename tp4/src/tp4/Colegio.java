@@ -14,10 +14,12 @@ public class Colegio {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        Materia m= new Materia(05,"Web 2",2);
-        Materia m = new Materia(01,"Matematicas I",1);
-        Materia m = new Materia(02,"Laboratorio"),1);
+        Materia m1= new Materia(05,"Web 2",2);
+        Materia m2 = new Materia(01,"Matematicas I",1);
+        Materia m3 = new Materia(02,"Laboratorio",1);
         
+        Alumno a1 = new Alumno(1001,"Lopez","Martin");
+        Alumno a2 = new Alumno(1002,"Martinez","Brenda");
         
     }
     

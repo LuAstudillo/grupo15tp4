@@ -4,6 +4,8 @@
  */
 package tp4;
 
+import java.util.HashSet;
+
 /**
  *
  * @author Luly2
@@ -18,6 +20,32 @@ public class Alumno {
         this.Apellido = Apellido;
         this.Nombre = Nombre;
     }
+
+    public int getNroLegajo() {
+        return nroLegajo;
+    }
+
+    public String getApellido() {
+        return Apellido;
+    }
+
+    public String getNombre() {
+        return Nombre;
+    }
+
+    public HashSet<Materia> getMaterias() {
+        return materias;
+    }
     
-   
+    
+    
+    private HashSet<Materia> materias;
+    
+
+public void agregarMateria(Materia materia){
+    materias.add(materia);
+}
+public int cantidadMaterias(){
+    return materias.size();
+}
 }
