@@ -14,8 +14,9 @@ import java.util.HashSet;
 public class Menu extends javax.swing.JFrame {
     
     private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(Menu.class.getName());
-    static HashSet<Alumno> alumnos = new HashSet<>();
-    static HashSet<Materia> materias = new HashSet<>();
+    public static HashSet<Alumno> listaAlumnos = new HashSet<>();
+    public static HashSet<Materia> listaMaterias = new HashSet<>();
+    
     public Menu() {
         initComponents();
       this.getContentPane().setBackground(new Color(51, 102, 153));
