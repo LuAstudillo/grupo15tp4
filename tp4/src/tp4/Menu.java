@@ -11,12 +11,12 @@ import java.util.HashSet;
  *
  * @author Luly2
  */
-public class NewJFrame extends javax.swing.JFrame {
+public class Menu extends javax.swing.JFrame {
     
-    private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(NewJFrame.class.getName());
+    private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(Menu.class.getName());
     static HashSet<Alumno> alumnos = new HashSet<>();
     static HashSet<Materia> materias = new HashSet<>();
-    public NewJFrame() {
+    public Menu() {
         initComponents();
       this.getContentPane().setBackground(new Color(51, 102, 153));
     }
@@ -52,6 +52,7 @@ public class NewJFrame extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(0, 102, 153));
+        setPreferredSize(new java.awt.Dimension(600, 500));
 
         javax.swing.GroupLayout escritorioLayout = new javax.swing.GroupLayout(escritorio);
         escritorio.setLayout(escritorioLayout);
@@ -65,8 +66,10 @@ public class NewJFrame extends javax.swing.JFrame {
         );
 
         jMAlumno.setText("Alumno");
+        jMAlumno.addActionListener(this::jMAlumnoActionPerformed);
 
         jItAgAlumno.setText("Agregar Alumno");
+        jItAgAlumno.addActionListener(this::jItAgAlumnoActionPerformed);
         jMAlumno.add(jItAgAlumno);
 
         jMenuBar1.add(jMAlumno);
@@ -111,9 +114,18 @@ public class NewJFrame extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+    
+   
 
     private void jItAgMateriaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jItAgMateriaActionPerformed
-        // TODO add your handling code here:
+        escritorio.removeAll();
+        FormularioDeMaterias fdm = new FormularioDeMaterias();
+        fdm.setVisible(true);
+        escritorio.add(fdm);
+        escritorio.moveToFront(fdm);
+        escritorio.revalidate();
+        escritorio.repaint();
+                
     }//GEN-LAST:event_jItAgMateriaActionPerformed
 
     private void jItInscribirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jItInscribirActionPerformed
@@ -123,6 +135,20 @@ public class NewJFrame extends javax.swing.JFrame {
     private void jItSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jItSalirActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jItSalirActionPerformed
+
+    private void jMAlumnoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMAlumnoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jMAlumnoActionPerformed
+
+    private void jItAgAlumnoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jItAgAlumnoActionPerformed
+         escritorio.removeAll();
+        FormularioDeAlumnos fda= new FormularioDeAlumnos();
+        fda.setVisible(true);
+        escritorio.add(fda);
+        escritorio.moveToFront(fda);
+        escritorio.revalidate();
+        escritorio.repaint();
+    }//GEN-LAST:event_jItAgAlumnoActionPerformed
 
     /**
      * @param args the command line arguments
@@ -146,7 +172,7 @@ public class NewJFrame extends javax.swing.JFrame {
         //</editor-fold>
 
         /* Create and display the form */
-        java.awt.EventQueue.invokeLater(() -> new NewJFrame().setVisible(true));
+        java.awt.EventQueue.invokeLater(() -> new Menu().setVisible(true));
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
