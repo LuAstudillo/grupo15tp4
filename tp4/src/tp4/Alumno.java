@@ -1,16 +1,9 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package tp4;
 
 import java.util.HashSet;
 
-/**
- *
- * @author Luly2
- */
 public class Alumno {
+    
     private int nroLegajo;
     private String Apellido;
     private String Nombre;
@@ -38,14 +31,13 @@ public class Alumno {
     }
     
     
-    
     private HashSet<Materia> materias = new HashSet<>();
-    
 
-public void agregarMateria(Materia materia){
-    materias.add(materia);
-}
-public int cantidadMaterias(){
-    return materias.size();
-}
+    public void agregarMateria(Materia materia) {
+        materias.add(materia);
+    }
+
+    public int cantidadMaterias() {
+        return materias.size();
+    }
 }
