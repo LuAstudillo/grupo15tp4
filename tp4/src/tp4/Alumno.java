@@ -39,7 +39,7 @@ public class Alumno {
     
     
     
-    private HashSet<Materia> materias;
+    private HashSet<Materia> materias = new HashSet<>();
     
 
 public void agregarMateria(Materia materia){
