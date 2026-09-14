@@ -64,14 +64,11 @@
                               <Component id="jLañoPertenece" min="-2" max="-2" attributes="0"/>
                           </Group>
                       </Group>
-                      <EmptySpace max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="jTFaño" min="-2" pref="160" max="-2" attributes="0"/>
-                          <Component id="jTFnombreMateria" alignment="0" min="-2" pref="160" max="-2" attributes="0"/>
-                          <Group type="102" alignment="1" attributes="0">
-                              <Component id="jTFcodigo" min="-2" pref="92" max="-2" attributes="0"/>
-                              <EmptySpace min="-2" pref="68" max="-2" attributes="0"/>
-                          </Group>
+                          <Component id="jTFcodigo" min="-2" pref="113" max="-2" attributes="0"/>
+                          <Component id="jTFnombreMateria" min="-2" pref="160" max="-2" attributes="0"/>
+                          <Component id="jTFaño" min="-2" pref="162" max="-2" attributes="0"/>
                       </Group>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
@@ -79,7 +76,7 @@
                       <Component id="jButton3" min="-2" pref="59" max="-2" attributes="0"/>
                   </Group>
               </Group>
-              <EmptySpace pref="14" max="32767" attributes="0"/>
+              <EmptySpace pref="46" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -102,7 +99,7 @@
                   <Component id="jLañoPertenece" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="jTFaño" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace pref="80" max="32767" attributes="0"/>
+              <EmptySpace pref="138" max="32767" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="jButton1" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="jButton2" alignment="3" min="-2" max="-2" attributes="0"/>
