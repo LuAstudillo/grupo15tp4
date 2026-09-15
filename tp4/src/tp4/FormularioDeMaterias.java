@@ -4,6 +4,8 @@
  */
 package tp4;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author Luly2
@@ -35,9 +37,9 @@ public class FormularioDeMaterias extends javax.swing.JInternalFrame {
         jTFcodigo = new javax.swing.JTextField();
         jTFnombreMateria = new javax.swing.JTextField();
         jTFaño = new javax.swing.JTextField();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
+        jBguardar = new javax.swing.JButton();
+        jBnuevo = new javax.swing.JButton();
+        jBsalir = new javax.swing.JButton();
 
         jScrollPane1.setViewportView(jTree1);
 
@@ -57,20 +59,20 @@ public class FormularioDeMaterias extends javax.swing.JInternalFrame {
 
         jTFaño.addActionListener(this::jTFañoActionPerformed);
 
-        jButton1.setFont(new java.awt.Font("Arial", 0, 13)); // NOI18N
-        jButton1.setText("Guardar");
-        jButton1.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jButton1.addActionListener(this::jButton1ActionPerformed);
+        jBguardar.setFont(new java.awt.Font("Arial", 0, 13)); // NOI18N
+        jBguardar.setText("Guardar");
+        jBguardar.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jBguardar.addActionListener(this::jBguardarActionPerformed);
 
-        jButton2.setFont(new java.awt.Font("Arial", 0, 13)); // NOI18N
-        jButton2.setText("Nuevo");
-        jButton2.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jButton2.addActionListener(this::jButton2ActionPerformed);
+        jBnuevo.setFont(new java.awt.Font("Arial", 0, 13)); // NOI18N
+        jBnuevo.setText("Nuevo");
+        jBnuevo.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jBnuevo.addActionListener(this::jBnuevoActionPerformed);
 
-        jButton3.setFont(new java.awt.Font("Arial", 0, 13)); // NOI18N
-        jButton3.setText("Salir");
-        jButton3.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jButton3.addActionListener(this::jButton3ActionPerformed);
+        jBsalir.setFont(new java.awt.Font("Arial", 0, 13)); // NOI18N
+        jBsalir.setText("Salir");
+        jBsalir.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jBsalir.addActionListener(this::jBsalirActionPerformed);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -80,9 +82,9 @@ public class FormularioDeMaterias extends javax.swing.JInternalFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGap(158, 158, 158)
-                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jBguardar, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(15, 15, 15)
-                        .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(jBnuevo, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(99, 99, 99)
                         .addComponent(jLtitulo))
@@ -104,7 +106,7 @@ public class FormularioDeMaterias extends javax.swing.JInternalFrame {
                             .addComponent(jTFaño, javax.swing.GroupLayout.PREFERRED_SIZE, 162, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(321, 321, 321)
-                        .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(jBsalir, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(46, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -125,9 +127,9 @@ public class FormularioDeMaterias extends javax.swing.JInternalFrame {
                     .addComponent(jTFaño, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 138, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton1)
-                    .addComponent(jButton2)
-                    .addComponent(jButton3))
+                    .addComponent(jBguardar)
+                    .addComponent(jBnuevo)
+                    .addComponent(jBsalir))
                 .addContainerGap())
         );
 
@@ -138,23 +140,32 @@ public class FormularioDeMaterias extends javax.swing.JInternalFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jTFañoActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton2ActionPerformed
+    private void jBnuevoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBnuevoActionPerformed
+       jTFcodigo.setText("");
+       jTFnombreMateria.setText("");
+       jTFaño.setText("");
+    }//GEN-LAST:event_jBnuevoActionPerformed
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton3ActionPerformed
+    private void jBsalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBsalirActionPerformed
+        dispose();
+    }//GEN-LAST:event_jBsalirActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
+    private void jBguardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBguardarActionPerformed
+        int codigo = Integer.parseInt(jTFcodigo.getText());
+        String nombreM = jTFnombreMateria.getText();
+        int año = Integer.parseInt(jTFaño.getText());
+        
+        Materia materia = new Materia(codigo,nombreM,año);
+       Menu.listaMaterias.add(materia);
+       JOptionPane.showMessageDialog(this, "Materia guardada");
+       
+    }//GEN-LAST:event_jBguardarActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
+    private javax.swing.JButton jBguardar;
+    private javax.swing.JButton jBnuevo;
+    private javax.swing.JButton jBsalir;
     private javax.swing.JLabel jLañoPertenece;
     private javax.swing.JLabel jLcodigoMateria;
     private javax.swing.JLabel jLnombreMateria;

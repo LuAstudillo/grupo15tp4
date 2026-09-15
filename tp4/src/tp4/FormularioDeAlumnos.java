@@ -4,6 +4,8 @@
  */
 package tp4;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author Luly2
@@ -142,15 +144,24 @@ public class FormularioDeAlumnos extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_jTFlegajoActionPerformed
 
     private void jBguardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBguardarActionPerformed
-        // TODO add your handling code here:
+        String nombre = jTFnombre.getText();
+        String apellido = jTFapellido.getText();
+        int legajo =  Integer.parseInt(jTFlegajo.getText());
+      
+        Alumno alumno = new Alumno(legajo, apellido,nombre);
+        Menu.listaAlumnos.add(alumno);
+        JOptionPane.showMessageDialog(this, "Alumno guardado");
+     
     }//GEN-LAST:event_jBguardarActionPerformed
 
     private void jBsalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBsalirActionPerformed
-        // TODO add your handling code here:
+        dispose();
     }//GEN-LAST:event_jBsalirActionPerformed
 
     private void jBnuevoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBnuevoActionPerformed
-        // TODO add your handling code here:
+        jTFnombre.setText("");
+        jTFapellido.setText("");
+        jTFlegajo.setText("");
     }//GEN-LAST:event_jBnuevoActionPerformed
 
 
