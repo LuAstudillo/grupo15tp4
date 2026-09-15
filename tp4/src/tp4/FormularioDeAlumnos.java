@@ -4,6 +4,7 @@
  */
 package tp4;
 
+import java.util.HashSet;
 import javax.swing.JOptionPane;
 
 /**
@@ -12,11 +13,15 @@ import javax.swing.JOptionPane;
  */
 public class FormularioDeAlumnos extends javax.swing.JInternalFrame {
 
+    
+    private HashSet<Alumno> alumnos;
+    
     /**
      * Creates new form FormularioDeAlumnos
      */
-    public FormularioDeAlumnos() {
+    public FormularioDeAlumnos(HashSet<Alumno> alumnos) {
         initComponents();
+        this.alumnos = alumnos;
     }
 
     /**

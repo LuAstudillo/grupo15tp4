@@ -4,17 +4,25 @@
  */
 package tp4;
 
+import java.util.HashSet;
+
 /**
  *
  * @author Valentin
  */
 public class FormularioDeInscripcion extends javax.swing.JInternalFrame {
 
+    
+    
+    private HashSet<Alumno> alumnos;
+    private HashSet<Materia> materias;
     /**
      * Creates new form FormularioDeInscripcion
      */
-    public FormularioDeInscripcion() {
+    public FormularioDeInscripcion(HashSet<Alumno> alumnos, HashSet<Materia> materias) {
         initComponents();
+        this.alumnos = alumnos;
+        this.materias = materias;
     }
 
     /**

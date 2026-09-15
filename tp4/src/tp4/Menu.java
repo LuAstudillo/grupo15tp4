@@ -120,7 +120,7 @@ public class Menu extends javax.swing.JFrame {
 
     private void jItAgMateriaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jItAgMateriaActionPerformed
         escritorio.removeAll();
-        FormularioDeMaterias fdm = new FormularioDeMaterias();
+        FormularioDeMaterias fdm = new FormularioDeMaterias(listaMaterias);
         fdm.setVisible(true);
         escritorio.add(fdm);
         escritorio.moveToFront(fdm);
@@ -131,6 +131,13 @@ public class Menu extends javax.swing.JFrame {
 
     private void jItInscribirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jItInscribirActionPerformed
         // TODO add your handling code here:
+        escritorio.removeAll();
+        escritorio.repaint();
+        FormularioDeInscripcion fdi = new FormularioDeInscripcion(listaAlumnos, listaMaterias);
+        fdi.setVisible(true);
+        escritorio.add(fdi);
+        fdi.moveToFront();
+        
     }//GEN-LAST:event_jItInscribirActionPerformed
 
     private void jItSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jItSalirActionPerformed
@@ -142,8 +149,8 @@ public class Menu extends javax.swing.JFrame {
     }//GEN-LAST:event_jMAlumnoActionPerformed
 
     private void jItAgAlumnoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jItAgAlumnoActionPerformed
-         escritorio.removeAll();
-        FormularioDeAlumnos fda= new FormularioDeAlumnos();
+        escritorio.removeAll();
+        FormularioDeAlumnos fda= new FormularioDeAlumnos(listaAlumnos);
         fda.setVisible(true);
         escritorio.add(fda);
         escritorio.moveToFront(fda);

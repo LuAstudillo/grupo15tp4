@@ -40,4 +40,27 @@ public class Alumno {
     public int cantidadMaterias() {
         return materias.size();
     }
+
+    @Override
+    public int hashCode() {
+        int hash = 7;
+        hash = 67 * hash + this.nroLegajo;
+        return hash;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final Alumno other = (Alumno) obj;
+        return this.nroLegajo == other.nroLegajo;
+    }
+    
 }
